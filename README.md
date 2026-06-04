@@ -1,6 +1,9 @@
 ## my name is hyowon
+	ㄴnobody asked
    my dream is game programer
+	ㄴyou'll never be
    nice to meet you
+	ㄴfuck you
    
 
 <!--
