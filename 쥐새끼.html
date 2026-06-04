@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>벨리댄스 쥐</title>
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#222;
+    overflow:hidden;
+}
+
+.mouse{
+    position:relative;
+    animation:bounce 0.2s infinite alternate;
+}
+
+.head{
+    width:80px;
+    height:70px;
+    background:#b0b0b0;
+    border-radius:50%;
+    position:relative;
+    z-index:2;
+}
+
+.ear{
+    width:30px;
+    height:30px;
+    background:#c0c0c0;
+    border-radius:50%;
+    position:absolute;
+    top:-15px;
+}
+
+.ear.left{ left:5px; }
+.ear.right{ right:5px; }
+
+.eye{
+    width:8px;
+    height:8px;
+    background:black;
+    border-radius:50%;
+    position:absolute;
+    top:28px;
+}
+
+.eye.left{ left:22px; }
+.eye.right{ right:22px; }
+
+.nose{
+    width:12px;
+    height:12px;
+    background:pink;
+    border-radius:50%;
+    position:absolute;
+    left:34px;
+    top:40px;
+}
+
+.body{
+    width:100px;
+    height:120px;
+    background:#bdbdbd;
+    border-radius:50px;
+    margin:-10px auto 0;
+    transform-origin:50% 20%;
+    animation:bellyDance 0.12s infinite alternate;
+}
+
+.arm{
+    width:18px;
+    height:70px;
+    background:#bdbdbd;
+    position:absolute;
+    top:75px;
+    border-radius:20px;
+}
+
+.arm.left{
+    left:-5px;
+    transform-origin:top center;
+    animation:armDance 0.1s infinite alternate;
+}
+
+.arm.right{
+    right:-5px;
+    transform-origin:top center;
+    animation:armDance 0.1s infinite alternate-reverse;
+}
+
+.tail{
+    width:100px;
+    height:10px;
+    background:pink;
+    position:absolute;
+    top:130px;
+    left:85px;
+    border-radius:10px;
+    transform-origin:left center;
+    animation:tailDance 0.08s infinite alternate;
+}
+
+@keyframes bellyDance{
+    from{
+        transform:translateX(-25px) rotate(-12deg);
+    }
+    to{
+        transform:translateX(25px) rotate(12deg);
+    }
+}
+
+@keyframes armDance{
+    from{
+        transform:rotate(-45deg);
+    }
+    to{
+        transform:rotate(45deg);
+    }
+}
+
+@keyframes tailDance{
+    from{
+        transform:rotate(-40deg);
+    }
+    to{
+        transform:rotate(40deg);
+    }
+}
+
+@keyframes bounce{
+    from{
+        transform:translateY(0);
+    }
+    to{
+        transform:translateY(-10px);
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="mouse">
+    <div class="head">
+        <div class="ear left"></div>
+        <div class="ear right"></div>
+        <div class="eye left"></div>
+        <div class="eye right"></div>
+        <div class="nose"></div>
+    </div>
+
+    <div class="body"></div>
+
+    <div class="arm left"></div>
+    <div class="arm right"></div>
+
+    <div class="tail"></div>
+</div>
+
+</body>
+</html>
